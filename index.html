@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZUI - 开源HTML5跨屏框架</title>
+
+    <link href="css/zui.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/zui.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body class="debug-0">
+    <div id="step-1" class="movie-player">
+      <div id="movie">
+        <section id="themes" class="ele">
+          <div class="theme theme-blue"></div>
+          <div class="theme theme-red"></div>
+          <div class="theme theme-purple"></div>
+          <div class="theme theme-green"></div>
+        </section>
+        <section id="page1" class="transition page-container">
+          <div class="page-name ele dark"><i class="icon icon-home"></i> 首页</div>
+          <div class="page ele rounded bordered">
+          </div>
+          <div class="logo ele"><img src="imgs/logo.png" alt=""></div>
+          <div class="search ele bordered rounded" contenteditable="true">
+            <i class="icon icon-search"></i>
+          </div>
+          <nav class="nav ele rounded dark">
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+          </nav>
+          <div class="carousel ele slide rounded custom-block" data-ride="carousel" id="carousel1" data-name="幻灯片">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel1" data-slide-to="1"></li>
+              <li data-target="#carousel1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active"><img src="imgs/slide2.png"></div>
+              <div class="item"><img src="imgs/slide3.png"></div>
+              <div class="item"><img src="imgs/slide1.png"></div>
+            </div>
+            <a class="left carousel-control" href="#carousel1" data-slide="prev">
+              <span class="icon icon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel1" data-slide="next">
+              <span class="icon icon-chevron-right"></span>
+            </a>
+          </div>
+          <div class="block custom-block block1 ele rounded dark" data-name="HTML 自定义">
+            <div class="heading text-center">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+            <div class="content text-center">
+              <i class="icon icon-area-chart icon-4x" style="opacity: .5"></i>
+            </div>
+          </div>
+          <div class="block custom-block block2 ele rounded bordered" data-name="热门产品">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 30%"></i>
+            </div>
+            <div class="content list-sample">
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+            </div>
+          </div>
+          <div class="block custom-block block3 ele rounded bordered" data-name="最新动态">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 30%"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 70%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 50%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 80%"></i></div>
+            </div>
+          </div>
+          <div class="block custom-block block4 ele rounded bordered" data-name="联系我们">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 50%"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 55%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 70%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 85%"></i></div>
+            </div>
+          </div>
+          <div class="block custom-block block5 ele rounded bordered" data-name="博客">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 69%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 55%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 89%"></i></div>
+            </div>
+          </div>
+          <footer class="footer ele rounded gray">
+            <div class="text-center">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+          </footer>
+        </section>
+        <section id="page2" class="transition page-container">
+          <div class="page-name ele dark"><i class="icon icon-list-ul"></i> 文章列表</div>
+          <div class="page ele rounded bordered">
+          </div>
+          <div class="logo ele"><img src="imgs/logo.png" alt=""></div>
+          <div class="search ele bordered rounded" contenteditable="true">
+            <i class="icon icon-search"></i>
+          </div>
+          <nav class="nav ele rounded dark">
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+          </nav>
+          <div class="block custom-block block1 ele rounded bordered" data-name="联系我们">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 50%"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample dark"></i><i class="icon icon-text-sample dark" style="width: 45%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 55%"></i><i class="icon icon-text-sample" style="width: 25%"></i></div>
+              <hr>
+              <div><i class="icon icon-text-sample dark"></i><i class="icon icon-text-sample dark" style="width: 55%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 30%"></i><i class="icon icon-text-sample" style="width: 60%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 65%"></i></div>
+              <hr>
+              <div><i class="icon icon-text-sample dark"></i><i class="icon icon-text-sample dark" style="width: 60%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 25%"></i><i class="icon icon-text-sample" style="width: 65%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 35%"></i><i class="icon icon-text-sample" style="width: 25%"></i><i class="icon icon-text-sample" style="width: 15%"></i></div>
+              <hr>
+              <div><i class="icon icon-text-sample dark"></i><i class="icon icon-text-sample dark" style="width: 30%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 30%"></i><i class="icon icon-text-sample" style="width: 60%"></i></div>
+              <hr>
+              <div><i class="icon icon-text-sample dark"></i><i class="icon icon-text-sample dark" style="width: 50%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 30%"></i><i class="icon icon-text-sample" style="width: 60%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 25%"></i><i class="icon icon-text-sample" style="width: 65%"></i></div>
+              <hr>
+              <div><i class="icon icon-text-sample dark"></i><i class="icon icon-text-sample dark" style="width: 40%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 30%"></i><i class="icon icon-text-sample" style="width: 60%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 65%"></i></div>
+            </div>
+          </div>
+          <div class="block custom-block block2 ele rounded dark" data-name="HTML 自定义">
+            <div class="heading text-center">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+            <div class="content text-center">
+              <i class="icon icon-area-chart icon-4x" style="opacity: .5"></i>
+            </div>
+          </div>
+          <div class="block custom-block block3 ele rounded bordered" data-name="热门产品">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 30%"></i>
+            </div>
+            <div class="content list-sample">
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+            </div>
+          </div>
+          <div class="block custom-block block4 ele rounded bordered" data-name="最新动态">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 30%"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 70%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 50%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 80%"></i></div>
+            </div>
+          </div>
+          <footer class="footer ele rounded gray">
+            <div class="text-center">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+          </footer>
+        </section>
+        <section id="page3" class="transition page-container">
+          <div class="page-name ele dark"><i class="icon icon-th-large"></i> 商品浏览</div>
+          <div class="page ele rounded bordered">
+          </div>
+          <div class="logo ele"><img src="imgs/logo.png" alt=""></div>
+          <div class="search ele bordered rounded" contenteditable="true">
+            <i class="icon icon-search"></i>
+          </div>
+          <nav class="nav ele rounded dark">
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+          </nav>
+          <div class="block block1 ele rounded dark">
+            <div class="heading text-center">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+            <div class="content text-center">
+              <i class="icon icon-gift icon-4x" style="opacity: .5"></i>
+            </div>
+          </div>
+          <div class="block block2 ele rounded bordered" data-name="最新动态">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 30%"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 70%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 50%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 60%"></i></div>
+              <div><i class="icon icon-text-sample dark" style="width: 60px; height: 30px; margin-right: 5px"></i> <i class="icon icon-text-sample dark" style="width: 50px; height: 30px;"></i></div>
+            </div>
+          </div>
+          <div class="block custom-block block3 ele rounded bordered" data-name="联系我们">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 50%"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 55%"></i><i class="icon icon-text-sample" style="width: 25%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 30%"></i><i class="icon icon-text-sample" style="width: 60%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 65%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 25%"></i><i class="icon icon-text-sample" style="width: 65%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 35%"></i><i class="icon icon-text-sample" style="width: 25%"></i><i class="icon icon-text-sample" style="width: 15%"></i></div>
+            </div>
+          </div>
+          <div class="block block4 ele rounded bordered" data-name="热门产品">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 30%"></i>
+            </div>
+            <div class="content list-sample">
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+            </div>
+          </div>
+          <footer class="footer ele rounded gray">
+            <div class="text-center">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+          </footer>
+        </section>
+        <section id="page4" class="transition page-container">
+          <div class="page-name ele dark"><i class="icon icon-home"></i> 首页</div>
+          <div class="ele page-mobile-frame"></div>
+          <div class="page ele rounded bordered">
+          </div>
+          <div class="logo ele"><img src="imgs/logo.png" alt=""></div>
+          <div class="search ele bordered rounded">
+            <i class="icon icon-bars"></i>
+            <i class="icon icon-search"></i>
+          </div>
+          <nav class="nav ele rounded dark hidden">
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+            <i class="icon icon-text-sample"></i>
+          </nav>
+          <div class="carousel ele slide rounded custom-block" data-ride="carousel" id="carousel2" data-name="幻灯片">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel2" data-slide-to="1"></li>
+              <li data-target="#carousel2" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active"><img src="imgs/slide2.png"></div>
+              <div class="item"><img src="imgs/slide3.png"></div>
+              <div class="item"><img src="imgs/slide1.png"></div>
+            </div>
+            <a class="left carousel-control" href="#carousel2" data-slide="prev">
+              <span class="icon icon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel2" data-slide="next">
+              <span class="icon icon-chevron-right"></span>
+            </a>
+          </div>
+          <div class="block custom-block block1 ele rounded dark" data-name="HTML 自定义">
+            <div class="heading text-center">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+            <div class="content text-center">
+              <i class="icon icon-area-chart icon-4x" style="opacity: .5"></i>
+            </div>
+          </div>
+          <div class="block custom-block block2 ele rounded bordered" data-name="热门产品">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 30%"></i>
+            </div>
+            <div class="content list-sample">
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+              <i class="icon icon-text-sample"></i>
+            </div>
+          </div>
+          <div class="block custom-block block3 ele rounded bordered" data-name="最新动态">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 30%"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 70%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 50%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 80%"></i></div>
+            </div>
+          </div>
+          <div class="block custom-block block4 ele rounded bordered" data-name="联系我们">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample" style="width: 50%"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 55%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 70%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 85%"></i></div>
+            </div>
+          </div>
+          <div class="block custom-block block5 ele rounded bordered" data-name="博客">
+            <div class="heading">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+            <div class="content">
+              <div><i class="icon icon-text-sample" style="width: 69%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 55%"></i></div>
+              <div><i class="icon icon-text-sample" style="width: 89%"></i></div>
+            </div>
+          </div>
+          <footer class="footer ele rounded gray">
+            <div class="text-center">
+              <i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i><i class="icon icon-text-sample"></i>
+            </div>
+          </footer>
+        </section>
+        <div id="caption1" class="caption">
+          <h2>蝉知功能介绍 - <strong>设计篇</strong></h2>
+        </div>
+        <div id="caption2" class="caption">
+          <h3><strong>区块</strong> - 定制首页</h3>
+          <p>使用多种多样的区块让首页丰富起来</p>
+        </div>
+        <div id="caption3" class="caption">
+          <h3><strong>区块</strong> - 自定义</h3>
+          <p>轻松调整区块位置和大小，还有更多自定义功能</p>
+        </div>
+        <div id="caption4" class="caption">
+          <h3><strong>布局</strong> - 定制其他页面</h3>
+          <p>文章列表、商品浏览或自定义单页，布局统统由你决定</p>
+        </div>
+        <div id="caption5" class="caption">
+          <h3><strong>主题</strong> - 更换界面风格</h3>
+          <p>切换预设主题，让网站焕然一新，你还可以定制专属的个性化主题</p>
+        </div>
+        <div id="caption6" class="caption">
+          <h3><strong>模板</strong> - 专为移动设备设计</h3>
+          <p>内置移动模板，小屏设备也有最佳体验</p>
+        </div>
+        <div id="caption7" class="caption">
+          <h3>www.chanzhi.org</h3>
+        </div>
+      </div>
+      <div id="movieControl">
+        <a href="###" id="moviePlayBtn"><i class="icon icon-play"></i></a>
+        <div id="movieProgressText">1</div>
+        <input type="range" min="0" max="10" value="0" id="movieProgress">
+      </div>
+    </div>
+  </body>
+</html>
