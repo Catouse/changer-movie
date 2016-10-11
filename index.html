@@ -13,7 +13,7 @@
     <script src="js/zui.js"></script>
     <script src="js/index.js"></script>
   </head>
-  <body class="debug-0">
+  <body class="debug">
     <div id="step-1" class="movie-player">
       <div id="movie">
         <section id="themes" class="ele">
@@ -371,9 +371,50 @@
         </div>
       </div>
       <div id="movieControl">
-        <a href="###" id="moviePlayBtn"><i class="icon icon-play"></i></a>
+        <a href="javascript:;" id="moviePlayBtn"><i class="icon icon-play"></i></a>
         <div id="movieProgressText">1</div>
         <input type="range" min="0" max="10" value="0" id="movieProgress">
+        <a href="javascript:;" id="settingBtn"><i class="icon icon-cog"></i></a>
+      </div>
+      <div id="movieSetting">
+        <div class="row">
+          <div class="col-xs-3">
+            <select class="form-control" id="speed">
+              <option value="1">原速播放</option>
+              <option value="0.5">× 0.5</option>
+              <option value="1.25">× 1.25</option>
+              <option value="1.5">× 1.5</option>
+              <option value="2">× 2</option>
+              <option value="3">× 3</option>
+              <option value="4">× 4</option>
+              <option value="5">× 5</option>
+              <option value="10">× 10</option>
+            </select>
+          </div>
+          <div class="col-xs-3">
+            <select class="form-control" id="zoom">
+              <option value="0.5">400×300</option>
+              <option value="1">800×600（默认）</option>
+              <option value="1.2">960×720</option>
+              <option value="1.25">1000×750</option>
+              <option value="1.5">1200×900</option>
+              <option value="1.8">1440×1080</option>
+              <option value="2">1600×1200</option>
+              <option value="3">2400×1800</option>
+            </select>
+          </div>
+          <div class="col-xs-6 checkboxs">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="loop"> 循环播放
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="autoplay"> 自动开始
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="debug"> DEBUG
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   </body>

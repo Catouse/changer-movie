@@ -2,6 +2,9 @@ body {
   background-color: #ddd;
   overflow: hidden;
 }
+body.zoom-large {
+  overflow-y: auto;
+}
 
 .movie-player {
   width: 800px;
@@ -9,6 +12,16 @@ body {
   margin: 20px auto;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
   position: relative;
+}
+
+body.zoom-large .movie-player {
+  margin: 0 auto;
+}
+
+@media (max-height: 800px) {
+  .movie-player {
+    margin: 0 auto;
+  }
 }
 
 #movie {
@@ -40,19 +53,27 @@ body:not(.debug) .movie-player:not(.playing) #movie {
   filter: blur(8px);
 }
 #movieControl {
-  position: absolute;
-  bottom: -40px;
   height: 40px;
   width: 100%;
   background-color: rgba(0,0,0,.1);
+  position: relative;
 }
 #movieProgress {
   position: absolute;
-  left: 90px;
-  right: 0;
+  left: 160px;
   top: 0;
-  width: 700px;
+  width: 600px;
   height: 40px;
+}
+#settingBtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  top: 0;
+  right: 0;
+  color: #777;
 }
 #moviePlayBtn {
   position: absolute;
@@ -65,9 +86,11 @@ body:not(.debug) .movie-player:not(.playing) #movie {
   color: #777;
   transition: all .4s;
 }
+#settingBtn:hover,
 #moviePlayBtn:hover {
   color: #333;
 }
+#settingBtn > .icon,
 #moviePlayBtn > .icon {
   display: block;
   font-size: 20px;
@@ -102,7 +125,7 @@ body:not(.debug) .movie-player:not(.playing) #moviePlayBtn:hover > .icon {
 }
 #movieProgressText {
   height: 40px;
-  width: 40px;
+  width: 110px;
   text-align: center;
   line-height: 40px;
   font-weight: 200;
@@ -117,6 +140,19 @@ body:not(.debug) .movie-player:not(.playing) #moviePlayBtn:hover > .icon {
 }
 body:not(.debug) .movie-player:not(.playing) * {
   transition: none!important;
+}
+#movieSetting {
+  padding: 10px;
+  display: none;
+}
+body.show-setting #movieSetting {
+  display: block;
+}
+body.show-setting #settingBtn > .icon:before {
+  content: '\e6de';
+}
+#movieSetting .checkbox-inline {
+  margin-top: 6px;
 }
 
 .transition {
