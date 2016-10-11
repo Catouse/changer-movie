@@ -2,7 +2,7 @@
 
 使用 HTML5 制作的蝉知功能介绍动画。
 
-https://github.com/Catouse/changer-movie
+https://catouse.github.io/changer-movie/
 
 用到的工具：
 
