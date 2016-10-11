@@ -1,3 +1,7 @@
+.tooltip.text-left .tooltip-inner {
+  text-align: left;
+}
+
 body {
   background-color: #ddd;
   overflow: hidden;
@@ -9,14 +13,10 @@ body.zoom-large {
 .movie-player {
   width: 800px;
   background-color: #fff;
-  margin: 20px auto;
+  margin: 0 auto 0 auto;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
   position: relative;
-}
-
-body.zoom-large .movie-player {
-  margin: 0 auto;
-}
+}                                                                                                                                        
 
 @media (max-height: 800px) {
   .movie-player {

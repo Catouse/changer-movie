@@ -46,6 +46,7 @@ $(function() {
     var $movieProgressText = $('#movieProgressText');
     var $moviePlayBtn = $('#moviePlayBtn');
     var $movie = $('#movie');
+    var $window = $(window);
     var $body = $('body');
     var tickCall = null;
     var stepInCall = null;
@@ -63,6 +64,26 @@ $(function() {
     var zoom = getNumber(getOption('zoom', 1));
     var debugMode = getBool(getOption('debug', false));
     var showSettingMenu = getBool(getOption('setting'), false);
+    var setMovieZoom = function() {
+        var betterZoom = zoom;
+        var wWidth = $window.width();
+        var wHeight = $window.height();
+        var width = 800;
+        var height = 692;
+        if(zoom <= 1) {
+            var maxWidthZoom = wWidth/width;
+            var maxHeightZoom = wHeight/height;
+            betterZoom = Math.min(maxWidthZoom, Math.min(maxHeightZoom, zoom));
+        }
+        $player.css('zoom', betterZoom);
+        var playerHeight = $player.height() * betterZoom;
+        console.log('playerHeight', playerHeight);
+        $player.css('margin-top', Math.max(0, (wHeight - playerHeight)/2));
+        $body.toggleClass('zoom-large', (playerHeight + 20) > wHeight);
+        if(betterZoom != zoom) {
+            $.zui.messager.show(Math.floor(betterZoom*100) + '%', {icon: betterZoom > 1 ? 'zoom-in' : 'zoom-out', close: false, placement: 'center'});
+        }
+    };
     var getStepTime = function(step) {
         if(step === undefined) step = timeline.length;
         var time = 0;
@@ -164,13 +185,14 @@ $(function() {
         $.zui.store.set('debug', debugMode);
     });
 
-    $body.css('zoom', zoom).toggleClass('zoom-large', zoom > 1);
+    setMovieZoom();
     var $zoom = $('#zoom').val(zoom);
     $zoom.on('change', function() {
         zoom = getNumber($(this).val());
-        $body.css('zoom', zoom).toggleClass('zoom-large', zoom > 1);
+        setMovieZoom();
         $.zui.store.set('zoom', zoom);
     });
+    $window.resize(setMovieZoom);
 
     var $loopCheck = $('#loop').prop('checked', isLoopPlay);
     $loopCheck.on('change', function() {
@@ -189,4 +211,6 @@ $(function() {
         speed = getNumber($(this).val());
         $.zui.store.set('speed', speed);
     });
+
+    $('[data-toggle="tooltip"]').tooltip({container: 'body'});
 });
